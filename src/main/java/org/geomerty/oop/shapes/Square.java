@@ -10,4 +10,8 @@ public class Square {
     public double getArea() {
         return side * side;
     }
+
+    public double getPerimeter() {
+        return 2 * (side + side);
+    }
 }
