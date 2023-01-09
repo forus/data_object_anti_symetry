@@ -3,6 +3,7 @@ package org.geomerty.oop;
 import org.geomerty.oop.shapes.Circle;
 import org.geomerty.oop.shapes.Rectangle;
 import org.geomerty.oop.shapes.Square;
+import org.geomerty.oop.shapes.Triangle;
 
 public class Geometry {
 
@@ -21,5 +22,9 @@ public class Geometry {
         Circle circle = new Circle(6.3);
         System.out.println("Area of circle is " + circle.getArea());
         System.out.println("Perimeter of circle is " + circle.getPerimeter());
+
+        Triangle triangle = new Triangle(10, 10, 10);
+        System.out.println("Area of triangle is " + triangle.getArea());
+        System.out.println("Perimeter of triangle is " + triangle.getPerimeter());
     }
 }
