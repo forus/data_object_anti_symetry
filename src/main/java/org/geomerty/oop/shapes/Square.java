@@ -1,11 +1,9 @@
 package org.geomerty.oop.shapes;
 
 public class Square implements iShape{
-    private final Point topLeft;
     private final double side;
 
-    public Square(double pointX, double pointY, double side) {
-        this.topLeft = new Point(pointX, pointY);
+    public Square(double side) {
         this.side = side;
     }
 
