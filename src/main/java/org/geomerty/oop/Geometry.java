@@ -4,6 +4,7 @@ import org.geomerty.procedural.shapes.Circle;
 import org.geomerty.procedural.shapes.Point;
 import org.geomerty.procedural.shapes.Rectangle;
 import org.geomerty.procedural.shapes.Square;
+import org.geomerty.procedural.shapes.Triangle;
 
 public class Geometry {
 
@@ -19,5 +20,9 @@ public class Geometry {
         Circle circle = new Circle(new Point(8.7,4),6.3);
         System.out.println("Area of circle is " + circle.area());
         System.out.println("Perimeter of circle is " + circle.perimeter());
+
+        Triangle triangle = new Triangle(2,5,3,2);
+        System.out.println("Area of triangle is " + triangle.area());
+        System.out.println("Perimeter of triangle is " + triangle.perimeter());
     }
 }
