@@ -16,10 +16,12 @@ Make a fork of this repository and clone it to your machine.
 
 Implement OOP version of the procedural code that can be found in `org.geometry.procedural` package.
 There is already a [`Geometry` class](./src/main/java/org/geomerty/oop/Geometry.java) for OOP code. It is also an entry point for the program.
-Implement `Point`, `Point`, `Square` and `Rectangle` classes in best practices of OOP employing encapsulation, polymorphism and inheritance (if needed).
+Implement `Circle`, `Point`, `Square` and `Rectangle` classes in best practices of OOP employing encapsulation, polymorphism and inheritance (if needed).
 Make a commit to the git repository.
 
 Describe how application has changed?
+- The fields of the shapes classes is private, only constructor and getter is public -> encapsulation.
+- The geometry class declare the method to calculate the area, the shapes hold the logic by themselves -> polymorphism.
 
 ## 2. Add a new operation
 
