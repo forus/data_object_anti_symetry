@@ -22,4 +22,8 @@ public class Circle {
     public double area() {
         return PI * getRadius() * getRadius();
     }
+
+    public double perimeter() {
+        return 2 * PI * getRadius();
+    }
 }
