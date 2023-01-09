@@ -1,6 +1,23 @@
 package org.geomerty.procedural.shapes;
 
 public class Square {
-    public Point topLeft;
-    public double side;
+    private final Point topLeft;
+    private final double side;
+
+    public Square(Point topLeft, double side) {
+        this.topLeft= topLeft;
+        this.side=side;
+    }
+
+    public Point getTopLeft() {
+        return topLeft;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    public double area() {
+        return getSide() * getSide();
+    }
 }
