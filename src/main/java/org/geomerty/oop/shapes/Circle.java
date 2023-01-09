@@ -18,6 +18,11 @@ public class Circle extends Geometry {
         return PI * this.radius * this.radius;
     }
 
+    @Override
+    public double perimeter() {
+        return PI * this.radius * 2;
+    }
+
     public Point getCenter() {
         return center;
     }

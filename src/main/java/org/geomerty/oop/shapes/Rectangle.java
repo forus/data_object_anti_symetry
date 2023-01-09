@@ -18,6 +18,11 @@ public class Rectangle extends Geometry {
         return this.height * this.width;
     }
 
+    @Override
+    public double perimeter() {
+        return 2 * (this.width + this.height);
+    }
+
     public Point getTopLeft() {
         return topLeft;
     }

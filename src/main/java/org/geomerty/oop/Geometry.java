@@ -1,9 +1,6 @@
 package org.geomerty.oop;
 
-import org.geomerty.oop.shapes.Point;
-import org.geomerty.oop.shapes.Square;
-import org.geomerty.oop.shapes.Circle;
-import org.geomerty.oop.shapes.Rectangle;
+import org.geomerty.oop.shapes.*;
 
 public abstract class Geometry {
     public static void main(String[] args) {
@@ -21,7 +18,14 @@ public abstract class Geometry {
         Point circleCenter = new Point(8.7, 4);
         Circle circle = new Circle(circleCenter, 6.3);
         System.out.println("Area of circle is " + circle.area());
+
+        //Implement calculation of triangle area using oop code. Center: x = 3.4, y = 4.3; a = 2.1, b = 3.7, c = 2.8
+        Point triangleCenter = new Point(3.4, 4.3);
+        Triangle triangle = new Triangle(triangleCenter, 2.1, 3.7, 2.8);
+        System.out.println("Area of triangle is " + triangle.area());
     }
 
     public abstract double area();
+
+    public abstract double perimeter();
 }
