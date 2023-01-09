@@ -15,4 +15,9 @@ public class Circle implements iShape {
     public void area() {
         System.out.println("Area of circle is " + PI * radius * radius);
     }
+
+    @Override
+    public void perimeter() {
+        System.out.println("Perimeter of circle is " + 2 * PI * radius);
+    }
 }

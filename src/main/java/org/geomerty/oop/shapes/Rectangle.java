@@ -15,4 +15,9 @@ public class Rectangle implements iShape {
     public void area() {
         System.out.println("Area of rectangle is " + height * width);
     }
+
+    @Override
+    public void perimeter() {
+        System.out.println("Perimeter of rectangle is " + 2 * (height + width));
+    }
 }
