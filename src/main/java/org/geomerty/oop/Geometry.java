@@ -16,5 +16,10 @@ public class Geometry {
         Shape circle = new Circle(centerCircle,6.3);
         circle.getArea();
 
+        //Triangle
+        Point pointTriangle = new Point(1,1);
+        Shape triangle  = new Traingle(pointTriangle,4,5);
+        triangle.getArea();
+
     }
 }
