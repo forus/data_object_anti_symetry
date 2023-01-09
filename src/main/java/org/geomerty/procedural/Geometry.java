@@ -12,53 +12,72 @@ public class Geometry {
     public static double area(Object shape) throws NoSuchShapeException {
         if (shape instanceof Square) {
             Square s = (Square) shape;
-            return s.getSide() * s.getSide();
+            return s.side * s.side;
         } else if (shape instanceof Rectangle) {
             Rectangle r = (Rectangle) shape;
-            return r.getHeight() * r.getWidth();
+            return r.height * r.width;
         } else if (shape instanceof Circle) {
             Circle c = (Circle) shape;
-            return PI * c.getRadius() * c.getRadius();
+            return PI * c.radius * c.radius;
         } else if (shape instanceof Triangle) {
             Triangle t = (Triangle) shape;
-            return 0.5 * t.getB() * t.getHeight();
+            return 0.5 * t.b * t.height;
         }
+
         throw new NoSuchShapeException();
     }
 
     public static double perimeter(Object shape) throws NoSuchShapeException {
         if (shape instanceof Square) {
             Square s = (Square) shape;
-            return 2 * (s.getSide() + s.getSide());
+            return 2 * (s.side + s.side);
         } else if (shape instanceof Rectangle) {
             Rectangle r = (Rectangle) shape;
-            return 2 * (r.getHeight() + r.getWidth());
+            return 2 * (r.height + r.width);
         } else if (shape instanceof Circle) {
             Circle c = (Circle) shape;
-            return 2 * PI * c.getRadius();
+            return 2 * PI * c.radius;
         } else if (shape instanceof Triangle) {
             Triangle t = (Triangle) shape;
-            return t.getA() + t.getB() + t.getC();
+            return t.a + t.b + t.c;
         }
         throw new NoSuchShapeException();
     }
 
     public static void main(String[] args) throws NoSuchShapeException {
-        Point squareTopLeftPoint = new Point(2.5, 4.5);
-        Square square = new Square(squareTopLeftPoint, 3);
+        Square square = new Square();
+        Point squareTopLeftPoint = new Point();
+        squareTopLeftPoint.x = 2.5;
+        squareTopLeftPoint.y = 4.5;
+        square.topLeft = squareTopLeftPoint;
+        square.side = 3.0;
         System.out.println("Area of square is " + area(square));
         System.out.println("Perimeter of square is " + perimeter(square));
 
-
-        Rectangle rectangle = new Rectangle(new Point(10, 5), 4, 5);
+        Rectangle rectangle = new Rectangle();
+        Point rectangleTopLeftPoint = new Point();
+        rectangleTopLeftPoint.x = 10.0;
+        rectangleTopLeftPoint.y = 5.0;
+        rectangle.topLeft = rectangleTopLeftPoint;
+        rectangle.height = 4.0;
+        rectangle.width = 5.0;
         System.out.println("Area of rectangle is " + area(rectangle));
         System.out.println("Perimeter of rectangle is " + perimeter(rectangle));
 
-        Circle circle = new Circle(new Point(8.7, 4), 6.3);
+        Circle circle = new Circle();
+        Point circleCenter = new Point();
+        circleCenter.x = 8.7;
+        circleCenter.y = 4.0;
+        circle.center = circleCenter;
+        circle.radius = 6.3;
         System.out.println("Area of circle is " + area(circle));
         System.out.println("Perimeter of circle is " + perimeter(circle));
 
-        Triangle triangle = new Triangle(2,5,3,2);
+        Triangle triangle = new Triangle();
+        triangle.a = 2;
+        triangle.b = 5;
+        triangle.c = 3;
+        triangle.height = 2;
         System.out.println("Area of triangle is " + area(triangle));
         System.out.println("Perimeter of triangle is " + perimeter(triangle));
     }

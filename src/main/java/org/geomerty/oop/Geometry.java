@@ -1,10 +1,11 @@
 package org.geomerty.oop;
 
-import org.geomerty.procedural.shapes.Circle;
-import org.geomerty.procedural.shapes.Point;
-import org.geomerty.procedural.shapes.Rectangle;
-import org.geomerty.procedural.shapes.Square;
-import org.geomerty.procedural.shapes.Triangle;
+
+import org.geomerty.oop.shapes.Circle;
+import org.geomerty.oop.shapes.Point;
+import org.geomerty.oop.shapes.Rectangle;
+import org.geomerty.oop.shapes.Square;
+import org.geomerty.oop.shapes.Triangle;
 
 public class Geometry {
 
