@@ -1,4 +1,4 @@
-package org.geomerty.procedural.shapes;
+package org.geomerty.oop.shapes;
 
 public class Square extends Shape{
     public Point topLeft;

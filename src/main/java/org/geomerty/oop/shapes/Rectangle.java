@@ -1,4 +1,4 @@
-package org.geomerty.procedural.shapes;
+package org.geomerty.oop.shapes;
 
 public class Rectangle extends Shape{
     public Point topLeft;
