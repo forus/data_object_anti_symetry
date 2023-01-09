@@ -4,6 +4,7 @@ import org.geomerty.oop.shapes.Circle;
 import org.geomerty.oop.shapes.Rectangle;
 import org.geomerty.oop.shapes.Point;
 import org.geomerty.oop.shapes.Square;
+import org.geomerty.oop.shapes.Triangle;
 
 public class Geometry {
 
@@ -22,6 +23,11 @@ public class Geometry {
         Circle circle = new Circle(circleCenter, 6.3);
         System.out.println("Area of circle is " + circle.area());
         System.out.println("Perimeter of circle is " + circle.perimeter());
+
+        Point triangleTopLeftPoint = new Point(10.0, 5.0);
+        Triangle triangle = new Triangle(triangleTopLeftPoint, 4.0, 5.0);
+        System.out.println("Area of triangle is " + triangle.area());
+        System.out.println("Perimeter of triangle is " + triangle.perimeter());
 
     }
 }
