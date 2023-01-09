@@ -1,6 +1,6 @@
 package org.geomerty.oop.shapes;
 
-public class Shape {
+public abstract class Shape {
     protected double x;
     protected double y;
 
@@ -8,4 +8,7 @@ public class Shape {
         this.x = x;
         this.y = y;
     }
+
+    public abstract double calculateArea ();
+    public abstract double calculateParimeter ();
 }

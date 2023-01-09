@@ -10,7 +10,13 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-    public double calculateRectangleArea ( ) {
+    @Override
+    public double calculateArea () {
         return width * height;
+    }
+
+    @Override
+    public double calculateParimeter() {
+        return 2 * (width + height);
     }
 }

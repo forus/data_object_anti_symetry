@@ -8,7 +8,13 @@ public class Square extends Shape {
         this.side = side;
     }
 
-    public double calculateSquareArea () {
+    @Override
+    public double calculateArea () {
         return side * side;
+    }
+
+    @Override
+    public double calculateParimeter () {
+        return 4 * side;
     }
 }
