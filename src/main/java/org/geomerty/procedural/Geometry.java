@@ -1,9 +1,6 @@
 package org.geomerty.procedural;
 
-import org.geomerty.procedural.shapes.Circle;
-import org.geomerty.procedural.shapes.Point;
-import org.geomerty.procedural.shapes.Rectangle;
-import org.geomerty.procedural.shapes.Square;
+import org.geomerty.procedural.shapes.*;
 
 import static java.lang.Math.PI;
 
@@ -18,6 +15,9 @@ public class Geometry {
         } else if (shape instanceof Circle) {
             Circle c = (Circle) shape;
             return PI * c.radius * c.radius;
+        } else if (shape instanceof  Triangle) {
+            Triangle t = (Triangle) shape;
+            return 0.5 * t.base * t.height;
         }
         throw new NoSuchShapeException();
     }
@@ -32,6 +32,10 @@ public class Geometry {
         } else if (shape instanceof Circle) {
             Circle c = (Circle) shape;
             return 2 * PI * c.radius;
+        } else if (shape instanceof Triangle) {
+            Triangle t = (Triangle) shape;
+            double hypotenuse = Math.sqrt((t.base * t.base) + (t.height * t.height));
+            return t.base + t.height + hypotenuse;
         }
         throw new NoSuchShapeException();
     }
@@ -64,5 +68,11 @@ public class Geometry {
         circle.radius = 6.3;
         System.out.println("Area of circle is " + area(circle));
         System.out.println("Perimeter of circle is " + perimeter(circle));
+
+        Triangle triangle = new Triangle();
+        triangle.base = 10.0;
+        triangle.height = 5.0;
+        System.out.println("Area of triangle is " + area(triangle));
+        System.out.println("Perimeter of triangle is " + perimeter(triangle));
     }
 }

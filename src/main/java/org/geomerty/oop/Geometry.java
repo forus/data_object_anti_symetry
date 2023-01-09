@@ -3,6 +3,7 @@ package org.geomerty.oop;
 import org.geomerty.oop.shapes.Circle;
 import org.geomerty.oop.shapes.Rectangle;
 import org.geomerty.oop.shapes.Square;
+import org.geomerty.oop.shapes.Triangle;
 
 public class Geometry {
 
@@ -21,5 +22,9 @@ public class Geometry {
         Circle circle = new Circle(8.7, 4.0, 6.3);
         circle.area();
         circle.perimeter();
+
+        Triangle triangle = new Triangle(10.0, 5.0);
+        triangle.area();
+        triangle.perimeter();
     }
 }
