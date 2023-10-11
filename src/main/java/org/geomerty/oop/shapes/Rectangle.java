@@ -1,6 +1,6 @@
 package org.geomerty.oop.shapes;
 
-public class Rectangle  extends Point{
+public class Rectangle extends Point {
     public double height;
     public double width;
 
@@ -10,11 +10,11 @@ public class Rectangle  extends Point{
         this.width = width;
     }
 
-    public double area(){
+    public double area() {
         return height * width;
     }
 
-    public double perimeter(){
+    public double perimeter() {
         return 2 * (height + width);
     }
 }

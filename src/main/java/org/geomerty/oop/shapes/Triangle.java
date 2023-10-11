@@ -11,11 +11,11 @@ public class Triangle {
         this.c = c;
     }
 
-    public double area(){
+    public double area() {
         return Math.abs((a.x - c.x) * (b.y - c.y) - (b.x - c.x) * (a.y - c.y)) / 2;
     }
 
-    public double perimeter(){
+    public double perimeter() {
         return a.distance(b) + b.distance(c) + c.distance(a);
     }
 
