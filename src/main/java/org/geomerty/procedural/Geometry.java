@@ -4,6 +4,7 @@ import org.geomerty.procedural.shapes.Circle;
 import org.geomerty.procedural.shapes.Point;
 import org.geomerty.procedural.shapes.Rectangle;
 import org.geomerty.procedural.shapes.Square;
+import org.geomerty.procedural.shapes.Triangle;
 
 import static java.lang.Math.PI;
 
@@ -18,6 +19,9 @@ public class Geometry {
         } else if (shape instanceof Circle) {
             Circle c = (Circle) shape;
             return PI * c.radius * c.radius;
+        } else if (shape instanceof Triangle) {
+            Triangle t = (Triangle) shape;
+            return 0.5 * ((t.a.x - t.c.x) * (t.b.y - t.c.y) - (t.b.x - t.c.x) * (t.a.y - t.c.y));
         }
         throw new NoSuchShapeException();
     }
@@ -32,6 +36,11 @@ public class Geometry {
         } else if (shape instanceof Circle) {
             Circle c = (Circle) shape;
             return 2 * PI * c.radius;
+        } else if (shape instanceof Triangle) {
+            Triangle t = (Triangle) shape;
+            return Math.sqrt(Math.pow(t.a.x - t.b.x, 2) + Math.pow(t.a.y - t.b.y, 2)) +
+                    Math.sqrt(Math.pow(t.b.x - t.c.x, 2) + Math.pow(t.b.y - t.c.y, 2)) +
+                    Math.sqrt(Math.pow(t.c.x - t.a.x, 2) + Math.pow(t.c.y - t.a.y, 2));
         }
         throw new NoSuchShapeException();
     }
