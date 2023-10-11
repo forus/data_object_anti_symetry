@@ -16,6 +16,5 @@ public class Geometry {
         // TODO Implement calculation of circle area using oop code. Center: x = 8.7, y = 4.0; radius = 6.3;
         Circle circle = new Circle(8.7, 4.0, 6.3);
         System.out.println("Area of circle is " + circle.area());
-        
     }
 }
