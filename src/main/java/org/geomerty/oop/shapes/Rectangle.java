@@ -13,4 +13,8 @@ public class Rectangle  extends Point{
     public double area(){
         return height * width;
     }
+
+    public double perimeter(){
+        return 2 * (height + width);
+    }
 }

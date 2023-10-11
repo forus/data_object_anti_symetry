@@ -22,6 +22,20 @@ public class Geometry {
         throw new NoSuchShapeException();
     }
 
+    public static double perimeter(Object shape) throws NoSuchShapeException {
+        if (shape instanceof Square) {
+            Square s = (Square) shape;
+            return 4 * s.side;
+        } else if (shape instanceof Rectangle) {
+            Rectangle r = (Rectangle) shape;
+            return r.height * 2 + r.width * 2;
+        } else if (shape instanceof Circle) {
+            Circle c = (Circle) shape;
+            return 2 * PI * c.radius;
+        }
+        throw new NoSuchShapeException();
+    }
+
     public static void main(String[] args) throws NoSuchShapeException {
         Square square = new Square();
         Point squareTopLeftPoint = new Point();
